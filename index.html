@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Meeting for Competition">
+    <!-- <meta property="fb:app_id" content="595103571017897"> -->
+    <meta property="og:url" content="http://222.110.147.61/18iot16/MC">
+    <meta property="og:description" content='서울디지텍고등학교 자율동아리"MC"의 공식사이트입니다.'>
+    <meta property="og:image" content="./img/title_img.png">
+    <title>Meeting for Competition</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="icon" href="./img/ico.png">
+    <link rel="stylesheet" href="./style/index.css">
+    <script>
+        let style1 = [
+            'font-size : 90px',
+            'font-weight : bold',
+            'font-family : "Nanum Gothic", "sans-serif"',
+            'text-shadow : -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;',
+            'color : red'
+        ].join(';');
+        let style2 = [
+            'font-size : 30px',
+            'font-family : "Nanum Gothic", "sans-serif"',
+        ].join(';');
+        </script>
+    <!-- NOTE: 기본폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body id="no-drag">
+    <!-- <div id="pop">
+        <a href="http://m.site.naver.com/0wyyt">
+            <img src="./img/join.png">
+        </a>
+    </div> -->
+    <!-- <div id="pop">
+        
+    </div> -->
+    <div id="move_top">TOP</div>
+    <div id="loading">
+        <img id="loading-image" src="./img/ajax-loader.gif" alt="Loading..." />
+    </div>
+    <header>
+        <div id="progress"></div>
+        <div class="wrap">
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="./img/mc_logo_white.png" alt="MC 로고입니다.">
+                </a>
+            </div>
+            <div id="move">
+                <ul>
+                    <li>ABOUT</li>
+                    <li>ACIVITY</li>
+                    <li>TEAMMATE</li>
+                    <li>PROJECT</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="main_img">
+        <div></div>
+        <div>
+            <h1>We are One MC</h1>
+        </div>
+    </div>
+    <section>
+        <div id="about">
+            <div class="wrap">
+                <h2><span style="color: #2D51A3">A</span>BOUT</h2>
+                <div>
+                    <p>MC는<br>어떤<b style="color: black"> 동아리</b>인가요?</p>
+
+                    <p>MC는 서울디지텍고등학교 재학생으로 이루어진 동아리입니다.
+                        <br>봉사활동을 주로 하며 각종 It관련 대회에 참가합니다.
+                        <br>MC에서는 열정적으로 활동하는 팀원을 항시 모집하고 있습니다.</p>
+                </div>
+
+                <div>
+                    <img src="./img/about.jpg" alt="정재가 코딩하는 이미지입니다.">
+                </div>
+            </div>
+        </div>
+
+        <div id="history">
+            <div class="wrap">
+                <h2><span style="color: #2D51A3">H</span>ISTORY</h2>
+                <div>
+                    <div>
+                    <!-- <div style="height: calc(72px + 25px*2);"> -->
+                        <div class="history_right">
+                            <h3>2020</h3>
+                            <p>06월 26일 - 신입부원 결과발표</p>
+                            <p>06월 24일 - 신입부원 최종면접</p>
+                            <p>06월 23일 - 신입부원 1차 서류면접</p>
+                            <p>05월 29일 - 동아리 규칙 제정</p>
+                            <p>02월 13일 - TOI동아리 인수합병</p>
+                            <p>01월 18일 - MC 단체 사진 촬영</p>
+                        </div>
+                    </div>
+                    <div>
+                    <!-- <div style="height: calc(72px + 25px*7);"> -->
+                        <div class="history_left">
+                            <h3>2019</h3>
+                            <p>IoT 메이커스 해커톤 참가 - 12월 21일</p>
+                            <p>DevFest on Campus 2019 참가 - 11월 16일</p>
+                            <p>모두의 메이커학교 참가 - 10월 26일</p>
+                            <p>웰컴 투 메이커월드 참가 - 10월 11일</p>
+                            <p>서울 디지텍고등학교 자율동아리 "MC" 창설 - 09월 02일</p>
+                            <p>그린 메이커톤 참가 - 08월 02일</p>
+                            <p>서울 디지텍고등학교 자기계발 소모임 창설 - 07월 05일</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="result">
+            <div>
+                <div class="wrap">
+                    <div>
+                        <div class="small_title">현재 활동 멤버</div>
+                        <span id="num_mem" class="num" value="10">0</span>
+                    </div>
+                    <div>
+                        <div class="small_title">참여한 대회 개수</div>
+                        <span id="num_com" class="num" value="4">0</span>
+                    </div>
+                    <div>
+                        <div class="small_title">봉사활동 시간</div>
+                        <span id="num_vol" class="num" value="8">0</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+
+
+
+        <div id="activity">
+            <div class="wrap">
+                <h2><span style="color: #2D51A3">A</span>CTIVITY</h2>
+                <div>
+                    <p>MC는<br>어떤<b style="color: black;">활동</b>을 하나요?</p>
+                </div>
+
+                <div>
+                    <p>MC는 대회반과 봉사부로 나뉘어져 있으며
+                        <br>대회부는 각종 대회에 참가하기 위해 동아리실에서 공부를 하며
+                        <br>봉사부는 격주마다 봉사를 합니다.
+                        <br>
+                        <br>대회부는 매달 말에 한 달 동안 무엇을 했는지 발표하는 월말평가를 합니다.
+                        <br>활동 기간 대회부는 팀 프로젝트를 실시합니다.
+                        <br>대회부와 봉사부 둘 다 소속할 수 있습니다.
+                        <br>이외에도 MT나 운동회 등의 각종 친목 활동이 있습니다.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="summary">
+            <div class="wrap">
+                <div class="intro_wrap">
+                    <img src="./img/intro_icon01.png" alt="대표 이미지입니다.">
+                    <h3>실무에 가까운 기업형 프로세스</h3>
+                    <p>기획자, 개발자, 디자이너가 협업하는
+                        <br>프로젝트를 통해 실무에 가까운 경험을 쌓습니다.</p>
+                </div>
+                <div class="intro_wrap">
+                    <img src="./img/intro_icon02.png" alt="대표 이미지입니다.">
+                    <h3>자기계발 및 지식 공유</h3>
+                    <p>매달 1회 진행되는 세션과 자율적으로 진행되는
+                        <br>프로젝트를 통해 실무에 가까운 경험을 쌓습니다.</p>
+                </div>
+                <div class="intro_wrap">
+                    <img src="./img/intro_icon03.png" alt="대표 이미지입니다.">
+                    <h3>활발한 선/후배 커뮤니티</h3>
+                    <p>타 동아리의 회장직을 맡았던 학생들이 시행착오를
+                        <br>겪으며 얻은 교훈을 바탕으로 동아리를 운영하여,
+                        <br>신생동아리 못지 않는 실적과 분위기를 지니고 있습니다.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="teammate">
+            <div class="wrap">
+                <h2><span style="color: #2D51A3">T</span>EAMMATE</h2>
+                <div>
+                    <div id="teammate_list">
+                        <div>
+                            <table cellpadding="0">
+                                <thead>
+                                    <tr>
+                                        <th>직책</th>
+                                        <th>이름</th>
+                                        <th style="border-right: 0">분야</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="twice" rowspan="2">담당 선생님<br>Teacher</td>
+                                        <td class="twice">김남준<br>Namjun, Kim</td>
+                                        <td style="border-right: 0">프로그래밍</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice">정동엽<br>Dongyeop, Jeong</td>
+                                        <td class="twice" style="border-right: 0">수능영어<br>통합사회</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice">회장<br>Chairman</td>
+                                        <td class="twice student"><a href="http://edammade.kr">은영환</a><br>Younghwan, Eun</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / 디자인<br>기획 및 발표</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice">부회장<br>Vice Chairman</td>
+                                        <td class="twice student"><a href="./portfolio/lge/">이규은</a><br>Gyeeun, Lee</td>
+                                        <td style="border-right: 0">아두이노</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice">2학년장<br>Chairman of Second Grades</td>
+                                        <td class="twice student"><a href="./portfolio/kjh/">김준형</a><br>JunHyung, Kim</td>
+                                        <td style="border-right: 0">프론트엔드</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice">1학년장<br>Chairman of First Grades</td>
+                                        <td class="twice student"><a href="./portfolio/kjh/">김민석</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">팀원 - 3학년<br>Team Mate - Third Grades</td>
+                                        <td class="twice student"><a href="./portfolio/ksd/">강산들</a><br>Sandeul, Kang</td>
+                                        <td style="border-right: 0">백엔드</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/ajs/">안종수</a><br>Jongsu, An</td>
+                                        <td style="border-right: 0">프론트엔드</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/ebo/">이비오</a><br>Beo, Lee</td>
+                                        <td style="border-right: 0">웹 디자인</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/lsh/">이서현</a><br>Seohyun, Lee</td>
+                                        <td style="border-right: 0">앱 개발</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="6">팀원 - 2학년<br>Team Mate - Second Grades</td>
+                                        <td class="twice student"><a href="./portfolio/kms/">김민성</a><br>Minsung Kim</td>
+                                        <td style="border-right: 0">프론트엔드</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/wsi/">원선일</a><br>Sunil Won</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드<br/>서버</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/ysm/">유성민</a><br>SeongMin Yoo</td>
+                                        <td style="border-right: 0">프론트엔드</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/lsh/">이상혁</a><br>Sanghuk, Lee</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드<br/>아두이노</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./jbd/">이정훈</a><br>Junghun, Lee</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드<br/>JAVA/Python개발</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/jjj/">장정재</a><br>Jungjae, Jang</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드<br/>아두이노</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="10">팀원 - 1학년<br>Team Mate - First Grades</td>
+                                        <td class="twice student"><a href="./portfolio/">강현채</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">김지수</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">신재민</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">윤주성</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">이수현</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">임태윤</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">김민석</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">여준우</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">오유민</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="twice student"><a href="./portfolio/">임민재</a><br>null</td>
+                                        <td class="twice" style="border-right: 0">프론트엔드 / JAVA개발<br>인공지능</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="project">
+            <div class="wrap">
+                <h2><span style="color: #2D51A3">P</span>PROJECT</h2>
+                <div>
+                    <p>MC는<br>어떤<b style="color: black">프로젝트를</b>했나요?</p>
+                </div>
+
+                <div>
+                    <p>MC는 2019년 첫 대회인 "웰컴 투 메이커월드"에서 예선통과 후 입상하였습니다.
+                        <br>그 후 MC에서는 각 종 팀 프로젝트를 준비중이며, IT관련 대회를 준비하고 있습니다.
+                        <br>저희는 격주마다 "용산 장애인 복지관"에서 봉사를 합니다.
+                        <br>MC에서 참가한 대회와 봉사활동 관련 사진들은 아래에서 확인하실 수 있습니다.</p>
+                </div>
+
+                <div>
+                    <div id="gallary_menu">
+                        <ul>
+                            <li>COMPETITION</li>
+                            <li>GALLARY</li>
+                        </ul>
+
+                        <div id="competition_list">
+
+                            <div class="competition">
+                                <div>
+                                    <img src="./img/competition/first.jpg" alt="그린 메이커톤 홍보 포스터입니다.">
+                                    <div>
+                                        <h3>그린 메이커톤</h3>
+                                        <p>팀장 : 은영환</p>
+                                        <hr>
+                                        <p>팀원 : 김영종</p>
+                                        <hr>
+                                        <p>결과 : 1위 / 완성도상</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="competition odd">
+                                <div>
+                                    <img src="./img/competition/second.jpg" alt="웰컴 투 메이커월드 홍보 포스터입니다.">
+                                    <div>
+                                        <h3>웰컴 투 메이커월드</h3>
+                                        <p>팀장 : 은영환</p>
+                                        <hr>
+                                        <p>팀원 : 강산들</p>
+                                        <hr>
+                                        <p>팀원 : 김건우</p>
+                                        <hr>
+                                        <p>팀원 : 이정민</p>
+                                        <hr>
+                                        <p>결과 : 미래상</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="competition">
+                                <div>
+                                    <img src="./img/competition/third.jpg" alt="모두의 메이커학교 홍보 포스터입니다.">
+                                    <div>
+                                        <h3>모두의 메이커학교</h3>
+                                        <p>팀장 : 은영환</p>
+                                        <hr>
+                                        <p>팀원 : 강산들</p>
+                                        <hr>
+                                        <p>팀원 : 김건우</p>
+                                        <hr>
+                                        <p>결과 : 3위 / 베스트팀워크상</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="competition odd">
+                                <div>
+                                    <img src="./img/competition/forth.jpg" alt="IoT 메이커스 해커톤 홍보 포스터입니다.">
+                                    <div>
+                                        <h3>IoT 메이커스 해커톤</h3>
+                                        <p>팀장 : 은영환</p>
+                                        <hr>
+                                        <p>팀원 : 김영종</p>
+                                        <hr>
+                                        <p>팀원 : 강산들</p>
+                                        <hr>
+                                        <p>팀원 : 이규은</p>
+                                        <hr>
+                                        <p>결과 : 5위</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="gallary">
+
+                            <div id="slide_btn_1">
+                                <div>&#60;</div>
+                                <div>&#62;</div>
+                            </div>
+
+                            <div id="gallary_img">
+                                <img src="./img/slide/1.jpg" alt="그린 메이커톤">
+                                <img src="./img/slide/2.jpg" alt="웰컴 투 메이커월드 사전 모임">
+                                <img src="./img/slide/3.jpg" alt="웰컴 투 메이커월드">
+                                <img src="./img/slide/4.jpg" alt="웰컴 투 메이커월드">
+                                <img src="./img/slide/5.jpg" alt="웰컴 투 메이커월드">
+                                <img src="./img/slide/6.jpg" alt="유관순 열사 순국 제99주기 추모제">
+                                <img src="./img/slide/7.jpg" alt="모두의 메이커학교">
+                                <img src="./img/slide/8.jpg" alt="모두의 메이커학교">
+                                <img src="./img/slide/9.jpg" alt="모두의 메이커학교">
+                                <img src="./img/slide/10.jpg" alt="IoT 메이커스 해커톤">
+                                <img src="./img/slide/11.jpg" alt="IoT 메이커스 해커톤">
+                                <img src="./img/slide/12.jpg" alt="IoT 메이커스 해커톤">
+                                <img src="./img/slide/13.jpg" alt="IoT 메이커스 해커톤">
+                                <img src="./img/slide/14.jpg" alt="IoT 메이커스 해커톤">
+                                <img src="./img/slide/15.jpg" alt="2020코로나19대응 기부">
+                            </div>
+                            <div id="gallary_exp"><span></span><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <div style="position: absolute; top: 0; z-index: 99; width: 100%; height: 100%;"></div> -->
+    </section>
+    <footer>
+        <div class="wrap">
+            <div>
+                <a href="http://sdh.hs.kr"><img src="./img/footer/digitech_logo.png" alt="서울디지텍고등학교 로고입니다."></a>
+                <!-- <img src="./img/mc_logo.png" alt="MC 로고입니다."> -->
+            </div>
+
+            <div>
+                <p>위치 : [04346] 서울 용산구 회나무로12길 27 (이태원동, 서울디지텍고등학교)</p>
+                <p>대표자 은영환 | E-mail: eyh208@gamil.com</p>
+                <p style="font-weight: bold;">Copyright 2019 은영환 Allright reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    console.log('%c 잠깐만!', style1);
+    console.log('%c 본 페이지의 저작권은 18학번 은영환에게 있습니다. 무단 복제시에 저작권법 제124조에 의거하여 처벌받을 수 있습니다.', style2);
+</script>
+</html>
